@@ -10,7 +10,6 @@ occurences = {}
 nbMots = 0
 
 
-
 for se in babu:
 	if se[0].text not in occurences.keys():
 		occurences[se[0].text] = [se[3].text, 1]
@@ -18,6 +17,7 @@ for se in babu:
 		occurences[se[0].text][1] += 1;
 	nbMots += 1
 	# print(se[0].text, occurences[se[0].text][1])
+
 
 for entity, value in occurences.items():
 	print("{:>25}\t\t{:>25}\t\t{:>5}\t\t{:.2f}\t\t".format(entity,value[0],value[1],value[1]/nbMots))
