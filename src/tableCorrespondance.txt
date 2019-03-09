@@ -1,0 +1,5 @@
+Organization.ORGANIZATION   ORGANIZATION
+Location.LOCATION   LOCATION
+Person.PERSON   PERSON
+Numex.NUMBER    O
+_   O
