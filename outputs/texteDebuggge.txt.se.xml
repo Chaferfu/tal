@@ -1,0 +1,863 @@
+<specific_entities>
+<specific_entity>
+  <string>44</string>
+  <position>221</position>
+  <length>2</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>44</value>
+    <numvalue>44</numvalue>
+    <value>44</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>five</string>
+  <position>294</position>
+  <length>4</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>five</value>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>1979</string>
+  <position>938</position>
+  <length>4</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>1979</value>
+    <numvalue>1979</numvalue>
+    <value>1979</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>50</string>
+  <position>1016</position>
+  <length>2</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>50</value>
+    <numvalue>50</numvalue>
+    <value>50</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>1</string>
+  <position>1230</position>
+  <length>1</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>1</value>
+    <numvalue>1</numvalue>
+    <value>1</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>six</string>
+  <position>1487</position>
+  <length>3</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>six</value>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>one</string>
+  <position>1588</position>
+  <length>3</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>one</value>
+    <unit>one</unit>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>five</string>
+  <position>1686</position>
+  <length>4</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>five</value>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>One</string>
+  <position>2633</position>
+  <length>3</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>one</value>
+    <unit>One</unit>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>three</string>
+  <position>2891</position>
+  <length>5</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>three</value>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>one</string>
+  <position>3079</position>
+  <length>3</length>
+  <type>Numex.NUMBER</type>
+  <normalization>
+    <value>one</value>
+    <unit>one</unit>
+    <numvalue>0</numvalue>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>late 1970s</string>
+  <position>881</position>
+  <length>10</length>
+  <type>DateTime.DATE</type>
+  <normalization>
+    <value>late 1970s</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>1979</string>
+  <position>938</position>
+  <length>4</length>
+  <type>DateTime.DATE</type>
+  <normalization>
+    <value>1979</value>
+    <numyear>1979</numyear>
+    <date_span>1979-XX-XX</date_span>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>44 years old</string>
+  <position>221</position>
+  <length>12</length>
+  <type>DateTime.TIME</type>
+  <normalization>
+    <value>44 year old</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>$1</string>
+  <position>1229</position>
+  <length>2</length>
+  <type>Numex.NUMEX</type>
+  <normalization>
+    <value>$1</value>
+    <numvalue>1</numvalue>
+    <value>$1</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>six years</string>
+  <position>1487</position>
+  <length>9</length>
+  <type>Numex.NUMEX</type>
+  <normalization>
+    <value>six year</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Securities and Exchange Commission</string>
+  <position>132</position>
+  <length>34</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>Securities and Exchange Commission</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>the House</string>
+  <position>506</position>
+  <length>9</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>the House</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Commerce Committee</string>
+  <position>527</position>
+  <length>18</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>commerce committee</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Harvard</string>
+  <position>770</position>
+  <length>7</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>Harvard</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>School</string>
+  <position>782</position>
+  <length>6</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>school</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>SEC</string>
+  <position>870</position>
+  <length>3</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>Société Européenne de Communications SA</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>BankAmerica Corp</string>
+  <position>1067</position>
+  <length>16</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>bankamerica CORP</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Lloyd</string>
+  <position>1399</position>
+  <length>5</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>Lloyd</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Senate</string>
+  <position>1449</position>
+  <length>6</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>senate</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Senate Finance Committee</string>
+  <position>1449</position>
+  <length>24</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>senate finance committee</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Council</string>
+  <position>1832</position>
+  <length>7</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>council</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Democrat</string>
+  <position>2119</position>
+  <length>8</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>democrat</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Environmental Protection Agency</string>
+  <position>2169</position>
+  <length>31</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>environmental protection agency</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>American Express</string>
+  <position>2265</position>
+  <length>16</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>American Express Co.</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>American Express Co</string>
+  <position>2265</position>
+  <length>19</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>American Express Co. co</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>And Time</string>
+  <position>2357</position>
+  <length>8</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>and time</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Soviet Union</string>
+  <position>2483</position>
+  <length>12</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>Soviet union</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Bush</string>
+  <position>2532</position>
+  <length>4</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>bush</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>National Institutes of Health</string>
+  <position>2675</position>
+  <length>29</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>national institute of health</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Food and Drug Administration</string>
+  <position>2764</position>
+  <length>28</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>FDA</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Senate</string>
+  <position>3001</position>
+  <length>6</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>senate</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Senate Finance Committee</string>
+  <position>3001</position>
+  <length>24</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>senate finance committee</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Labor</string>
+  <position>3598</position>
+  <length>5</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>labor</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Labor Department</string>
+  <position>3598</position>
+  <length>16</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>labor department</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Service Employees International</string>
+  <position>3644</position>
+  <length>31</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>service employee international</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Service Employees International Union</string>
+  <position>3644</position>
+  <length>37</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>service employee international union</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>White House</string>
+  <position>3915</position>
+  <length>11</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>White House</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>White House</string>
+  <position>3941</position>
+  <length>11</length>
+  <type>Organization.ORGANIZATION</type>
+  <normalization>
+    <value>White House</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Consuela Washington</string>
+  <position>1</position>
+  <length>19</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Consuela Washington</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>174</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Clinton</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>John Dingell</string>
+  <position>468</position>
+  <length>12</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>John Dingell</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Mich</string>
+  <position>492</position>
+  <length>4</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Mich</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Dingell</string>
+  <position>623</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Dingell</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Harvard</string>
+  <position>770</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Harvard</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Law</string>
+  <position>778</position>
+  <length>3</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Law</value>
+    <lastname>Law</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>961</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Clinton</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Frank Newman</string>
+  <position>1000</position>
+  <length>12</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Frank Newman</value>
+    <lastname>Frank</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Newman</string>
+  <position>1180</position>
+  <length>6</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Newman</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Mr . Newman</string>
+  <position>1174</position>
+  <length>12</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Mister Newman</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Lloyd Bentsen</string>
+  <position>1399</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Lloyd Bentsen</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Bentsen</string>
+  <position>1423</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Bentsen</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Mr . Bentsen</string>
+  <position>1417</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Mister Bentsen</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Samuel Sessions</string>
+  <position>1529</position>
+  <length>15</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Samuel Sessions</value>
+    <lastname>Sessions</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>1653</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Clinton</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Peter Tarnoff</string>
+  <position>1754</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Peter Tarnoff</value>
+    <lastname>Peter</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Tim Wirth</string>
+  <position>1942</position>
+  <length>9</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Tim Wirth</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Joan Spero</string>
+  <position>2220</position>
+  <length>10</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Joan Spero</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Talbott</string>
+  <position>2392</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Talbott</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Bush</string>
+  <position>2532</position>
+  <length>4</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Bush</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Bernadine Healy</string>
+  <position>2640</position>
+  <length>15</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Bernadine Healy</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>David Kessler</string>
+  <position>2735</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>David Kessler</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Mickey Kantor</string>
+  <position>2855</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Mickey Kantor</value>
+    <lastname>Mickey</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Robert Kyle</string>
+  <position>2982</position>
+  <length>11</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Robert Kyle</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>3233</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Clinton</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Matthew McHugh</string>
+  <position>3307</position>
+  <length>14</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Matthew McHugh</value>
+    <lastname>McHugh</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Gus Speth</string>
+  <position>3396</position>
+  <length>9</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Gus Speth</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Kitty Higgins</string>
+  <position>3513</position>
+  <length>13</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Kitty Higgins</value>
+    <lastname>Kitty</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Sander Levin</string>
+  <position>3557</position>
+  <length>12</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Sander Levin</value>
+    <lastname>Sander</lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Jerry Palast</string>
+  <position>3624</position>
+  <length>12</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Jerry Palast</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>3780</position>
+  <length>7</length>
+  <type>Person.PERSON</type>
+  <normalization>
+    <value>Clinton</value>
+    <lastname></lastname>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>U . S .</string>
+  <position>2449</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>U.S.</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>U . S .</string>
+  <position>2815</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>U.S.</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>174</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Clinton</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Washington</string>
+  <position>207</position>
+  <length>10</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Washington</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Mich</string>
+  <position>492</position>
+  <length>4</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Mich</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Washington</string>
+  <position>602</position>
+  <length>10</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Washington</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Harvard Law School</string>
+  <position>770</position>
+  <length>18</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Harvard Law school</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Washington</string>
+  <position>798</position>
+  <length>10</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Washington</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>961</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Clinton</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>1653</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Clinton</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Colorado</string>
+  <position>2110</position>
+  <length>8</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Colorado</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>3233</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Clinton</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Michigan</string>
+  <position>3541</position>
+  <length>8</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>michigan</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Clinton</string>
+  <position>3780</position>
+  <length>7</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>Clinton</value>
+  </normalization>
+</specific_entity>
+<specific_entity>
+  <string>Separately</string>
+  <position>947</position>
+  <length>10</length>
+  <type>Location.LOCATION</type>
+  <normalization>
+    <value>N_LOCATION</value>
+  </normalization>
+</specific_entity>
+</specific_entities>

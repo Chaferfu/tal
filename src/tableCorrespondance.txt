@@ -2,4 +2,7 @@ Organization.ORGANIZATION   ORGANIZATION
 Location.LOCATION   LOCATION
 Person.PERSON   PERSON
 Numex.NUMBER    O
+DateTime.TIME   O
+DateTime.DATE   O
+Numex.NUMEX O
 _   O
