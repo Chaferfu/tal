@@ -11,8 +11,8 @@
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{vmargin}
-\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 \title{Comparaison d'outils d'analyse}								
 
 \author{ Bazin Mathias - Bonnard Nathan }						
@@ -84,6 +84,14 @@ Nous allons dans ce rapport comparer deux outils d'analyse de textes : LIMA du C
 
 Nous tenterons de mettre en évidence les points forts et limites de chaque outil et de comprendre les différences entre les résultats.
 
+\subsection{Etat de l'Art}
+
+Il existe aujourd'hui différents outils d'analyse de textes. Les plus utilisés sont CEA List LIMA, Stanford CoreNLP, NLTK et SpaCy. Tous utilisent l'approche statistique sauf Lima, d'où l'intérêt de les comparer à Lima.
+
+Les résultats qu'ils obtiennet different pour chaque corpus de test de réference mais on obtient en général au maximum autour de 95 pourcents de reussite pour le pos tagging pour les meilleurs avec prétraitement et pré-entrainement (cf.$https://aclweb.org/aclwiki/POS_Tagging_(State_of_the_art)$ et 90 pour la reconnaissance d'entités  nomméees ($http://www.aclweb.org/anthology/N16-1030$).
+
+La volonté d'étudier Lima et Stanford coreNLP est surtout due au fait que ces outils sont open source et utilisent des approches différentes.
+
 \subsection{Les outils}
 
 \subsubsection{LIMA}
@@ -102,6 +110,9 @@ L'outil développé par Stanford passe par une approche statistique en utilisant
 Le point fort de cette approche est qu'elle est plus souple, par l'apprentissage on s'attend à obtenir des résultats sur n'importe quel type de corpus, même des textes remplis de fautes de frappe/fautes d'orthographe, du moment que l'algorithme a été entrainé sur des corpus adaptés. On s'attend donc à trouver des résultats avec un fort rappel mais peut-être une précision moindre.
 
 Un autre point à souligner est le fait que pour entrainer l'algortithme, il faut lui fournir un corpus de textes annotés. Bien que la tâche d'annnotation puisse être longue dt fastidieuse, elle est moins compliquée que la rédaction de règles et ne nécessite pas forcement d'être faite par des experts linguistes.
+
+
+
 
 \newpage
 \section{Résultats et commentaires}
@@ -124,9 +135,8 @@ Pour l'évaluation sur les fichiers wsj0010.sentence on obtient les résultats s
 
 On voit que la précision et le rappel au niveau des tags sont tous les deux aux alentours des 75 pourcents, ce qui est plutôt bon.
 
-Malheuresement l'évaluation en utilisant les étiquettes universelles s'est montrée très compliquée. En effet, lorsque l'on analyse le texte avec lima, il ne segmente pas certains mots qu'il garde dans un seul token en tant que mot composé pour assigner un seul tag à ce dernier, certains mots sont aussi perdus, notemment les "'s" parfois. Cela crée une différence du nombre de lignes entre le lima output de lima et le fichier de réference avec lequel nous sommes censés faire l'évaluation. Dans ce cas le script evaluation.py ne fonctionne pas.
-
-Ainsi, l'évaluation n'a été possible qu'après avoir modifié lourdement les fichiers résultants de LIMA et/ou les fichiers de réference pour qu'ils aient le même nombre de lignes, les résultats qu'on en tire montrent clairement que ces modifications ont affecté les performances de LIMA mais c'était le seul moyen de pouvoir faire l'évalutaion.
+Malheuresement l'évaluation en utilisant les étiquettes universelles s'est montrée très compliquée. En effet, lorsque l'on analyse le texte avec lima, il ne segmente pas certains mots qu'il garde dans un seul token en tant que mot composé pour assigner un seul tag à ce dernier, certains mots sont aussi perdus, notemment les "'s" parfois. Bien que cela soit logique puisqu'il est naturel de considérer par exemple "Rust Belt" comme une seule entité, je crains que cela ait affecté en mal les résultats donnés par le script d'évaluation car nous allons le voir, les résultats sont moins bons. Certains fichiers contenaient aussi des caractères erronés qui n'étaient clairement pas à leur place comme un ] apres un nom d'étiquette, ce qui a forcé le nettoyage parfois manuel de certains fichiers. Il est possible que cela ait affecté le résultat mais ces manipulations étaient nécessaires au déroulement du test. \\ 
+Ces resultats ont étés donnés par l'évaluation sur les fichiers type wsj.sample.pos.lima.toText.
 
 
 \textbf{Lima sur wsj complet}
@@ -135,12 +145,12 @@ Ainsi, l'évaluation n'a été possible qu'après avoir modifié lourdement les 
 \hline
   Catégorie & Score (en pourcentage) \\
 \hline
-    Word precision & 33.9 \\
-    Word recall & 32.7 \\
-    Tag precision & 28.3 \\
-    Tag recall & 27.2 \\
-    Word F-measure & 33.3 \\
-    Tag F-measure & 27.7 \\
+    Word precision & 56.4 \\
+    Word recall & 51.8 \\
+    Tag precision & 52.4 \\
+    Tag recall & 48.1 \\
+    Word F-measure & 54.0 \\
+    Tag F-measure & 50.2 \\
     
 \end{tabular}
 
@@ -151,17 +161,17 @@ Ainsi, l'évaluation n'a été possible qu'après avoir modifié lourdement les 
 \hline
   Catégorie & Score (en pourcentage) \\
 \hline
-    Word precision & 33.9 \\
-    Word recall & 32.7 \\
-    Tag precision & 33.0 \\
-    Tag recall & 31.8 \\
-    Word F-measure & 33.3 \\
-    Tag F-measure & 32.4 \\
+    Word precision & 56.4 \\
+    Word recall &  51.8 \\
+    Tag precision & 55.4 \\
+    Tag recall & 50.9 \\
+    Word F-measure & 54.0 \\
+    Tag F-measure &  50.2 \\
     
 \end{tabular}
 
-Comme dit précédemment, on voit que les resultats sont bien moins bons mais cela est surement du à la modification des fichiers.\\
-On peut néanmoins comparer les resultats entre les tags PTB et Universels : on voit que les résultats en tags universels sont meilleurs, une hypothèse est que comme les tags universels sont plus généraux et moins précis que les tags Lima, la possibilité de se tromper est moindre. Par exemple Lima pourrait se tromper entre deux types d'adjectifs mais en universel il n'en existe qu'un type donc pas d'erreur.
+Comme dit précédemment, on voit que les resultats sont bien moins bons mais cela est surement du à la modification des fichiers. Des changements sur la ponctuation pouvaient avoir de l'influence sur les résultats (ajouter des espaces avant et après augmentait les résultats par exemple) mais il a été choisi de modifier le moins possible les fichiers pour rester fidèle aux textes de réference.\\
+On peut néanmoins comparer les resultats entre les tags PTB et Universels : on voit que les résultats en tags universels sont légèrement meilleurs poiur les tags, une hypothèse est que comme les tags universels sont plus généraux et moins précis que les tags Lima, la possibilité de se tromper est moindre. Par exemple Lima pourrait se tromper entre deux types d'adjectifs mais en universel il n'en existe qu'un type donc pas d'erreur.
 
 \subsection{Désambiguïsation morphosyntaxique de l’université de Stanford}
 
@@ -202,9 +212,9 @@ Les résultats sont les suivants sur le fichier wsj0010.sample
 
 Les résultats sont exactement les mêmes, ce qui est plutot étrange. On pourrait penser qu'il existe une correspondances assez bonne entre les tags PTB utilisés par Stanford et les tags universels.
 
-\subsection{Reconnaissance d’entités nommées du CEA List et l’université de Stanford}
+\subsection{Reconnaissance d’entités nommées}
 
-Encore une fois il a fallu de nombreuses transformations pour faire correspondre les fichiers obtenus en sortie d'analyse avec les fichiers de réference pour pouvoir utiliser le script d'évaluation mais il a été possible de soutirer ces résultats à Lima et Stanford sur le fichier formal.small.
+Encore une fois il a fallu de nombreuses transformations pour faire correspondre les fichiers obtenus en sortie d'analyse avec les fichiers de réference pour pouvoir utiliser le script d'évaluation. En effet, Lima produisait des erreurs ConllDumper dont la source n'a pas été trouvée. Pour permettre l'évaluation il a été une nouvelle fois nécessaire de modifier les fichiers obtenus. Malgré cela, il a été possible de soutirer ces résultats à Lima et Stanford sur le fichier formal.small.
 
 \textbf{Stanford - Entités nommées}
 
@@ -253,6 +263,11 @@ Nathan :  Partie analyse et rédaction du rapport
 
 
 \newpage
+\section{Conclusion}
+
+A travers ce projet nous avons pu apprendre beaucoup sur le fonctionnement de ces deux outils d'analyse et nous avons réflechi sur les points forts et points faibles des différentes approches qu'ils utilisent.
+
+Nous sommes néanmoins perplexes face aux résultats obtenus, en particulier pour Lima. Nous esperons que les modifications et les erreurs trouvées dans les fichiers de réferences n'ont pas trop déformé les scores que Lima aurait du obtenir.
 
  
 \end{document}
