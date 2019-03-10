@@ -1,4 +1,6 @@
-import sys 
+import sys
+
+#bad ??
 
 with open(sys.argv[2], "w") as out: #output file
 	with open(sys.argv[1]) as f: #input file
