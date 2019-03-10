@@ -1,9 +1,13 @@
 import sys
 import string
 
-if len(sys.argv) == 1:
-	print("mettez les argumetns")
-	sys.exit()
+#Affiche ce qui est demande dans la parite 4-2
+#simple parsing de mots
+
+
+# if len(sys.argv) == 1:
+# 	print("mettez les argumetns")
+# 	sys.exit()
 
 occurences = {}
 nbMots = 0

@@ -1,6 +1,7 @@
 import sys
 import re
 
+#insere des espaces avant et apres la ponctuation
 
 with open(sys.argv[2], "w") as out:
 

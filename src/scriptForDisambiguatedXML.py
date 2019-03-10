@@ -1,6 +1,12 @@
 import xml.etree.ElementTree as ET
 import sys 
 # from prettytable import PrettyTable 
+
+#simple parcours d'arbre xml
+#a utiliser sur les fichiers .xml
+
+
+
 occurences = {}
 nbMots = 0
 

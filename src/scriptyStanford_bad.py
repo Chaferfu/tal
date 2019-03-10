@@ -1,6 +1,8 @@
 import sys
 import string
 
+#ne pas utiliser
+
 if len(sys.argv) == 1:
 	print("mettez les argumetns")
 	sys.exit()

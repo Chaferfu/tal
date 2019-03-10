@@ -2,6 +2,8 @@ import sys
 
 correspondance = {}
 
+#change les tags ptb en tags uni pour les fichirs stanford
+
 with open("POSTags_PTB_Universal_Linux.txt") as f:
     for line in f:
         correspondance[line.split()[0]] = line.split()[1]

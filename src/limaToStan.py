@@ -1,6 +1,7 @@
 import sys 
 import re
 
+#passe un fichier .conll au format de stanford pour les entites nommées mot/ENTITE, doit etre lance depuis un repertoire contenant tableCorrespondance.txt (racine ou src)
 
 correspondance = {}
 lineNb = 1 #used in debug

@@ -1,6 +1,7 @@
 import sys
 import re
 
+#OBSOLETE
 
 with open(sys.argv[1]+".clean", "w") as out:
 

@@ -2,6 +2,10 @@ from lxml import etree
 import sys 
 # from prettytable import PrettyTable 
 
+#Affiche ce qui est demande dans la parite 2-2
+#simple parcours d'arbre xml
+#a utiliser sur les fichiers .xml
+
 # print(sys.argv[1])
 tree = etree.parse(sys.argv[1])
 babu = tree.xpath("/specific_entities/specific_entity")

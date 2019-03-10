@@ -1,6 +1,8 @@
 import sys 
 import re
 
+#tranforme les listes mot   POSTAG en textes au format mot_POSTAG
+
 with open(sys.argv[1]+".toText", "w") as out:
 
     with open(sys.argv[1]) as file:

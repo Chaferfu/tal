@@ -1,5 +1,6 @@
 import sys
 
+#change le format des entites nommmees stanford pour pouvoir etre evaluate.py
 
 with open(sys.argv[2], "w") as out:
 

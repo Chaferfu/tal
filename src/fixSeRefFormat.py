@@ -2,6 +2,8 @@ import sys
 
 seType = ""
 
+#transforme les balises ENAMEX en format Mot_Etiquette
+
 def peek(f, size = 1):
     pos = f.tell()
     line = f.read(size)
@@ -19,7 +21,7 @@ with open(sys.argv[2]+".temp", "w") as out:
                 break
 
             if c == "<":
-                if peek(file) == "/":
+                if peek(file) == "/": #remplace la balise de fin par _etiquette
                     while c != ">":
                         c = file.read(1)
                     out.write("_" + seType)
@@ -32,7 +34,7 @@ with open(sys.argv[2]+".temp", "w") as out:
 
                     c = file.read(1)
 
-                    while c != '"':
+                    while c != '"': # lis le type ontenu dans la balise de debut
                         seType += c
                         c = file.read(1)
 
@@ -43,10 +45,10 @@ with open(sys.argv[2]+".temp", "w") as out:
 
 with open(sys.argv[2], "w") as out:
 
-    with open(sys.argv[2]+".temp") as file:
+    with open(sys.argv[2]+".temp") as file: #nettoie les \n defectueux
 
         for line in file:
             if line == "\n": continue
-            out.write(line.replace(". ", "\n").replace("Mr\n", "Mr. ").replace("Ms\n","Ms. "))
+            # out.write(line.replace(". ", "\n")#.replace("Mr\n", "Mr. ").replace("Ms\n","Ms. "))
 
 print("Wrote output at " + sys.argv[2])
