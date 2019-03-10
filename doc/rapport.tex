@@ -122,9 +122,127 @@ Pour l'évaluation sur les fichiers wsj0010.sentence on obtient les résultats s
     
 \end{tabular}
 
+On voit que la précision et le rappel au niveau des tags sont tous les deux aux alentours des 75 pourcents, ce qui est plutôt bon.
+
+Malheuresement l'évaluation en utilisant les étiquettes universelles s'est montrée très compliquée. En effet, lorsque l'on analyse le texte avec lima, il ne segmente pas certains mots qu'il garde dans un seul token en tant que mot composé pour assigner un seul tag à ce dernier, certains mots sont aussi perdus, notemment les "'s" parfois. Cela crée une différence du nombre de lignes entre le lima output de lima et le fichier de réference avec lequel nous sommes censés faire l'évaluation. Dans ce cas le script evaluation.py ne fonctionne pas.
+
+Ainsi, l'évaluation n'a été possible qu'après avoir modifié lourdement les fichiers résultants de LIMA et/ou les fichiers de réference pour qu'ils aient le même nombre de lignes, les résultats qu'on en tire montrent clairement que ces modifications ont affecté les performances de LIMA mais c'était le seul moyen de pouvoir faire l'évalutaion.
 
 
+\textbf{Lima sur wsj complet}
 
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 33.9 \\
+    Word recall & 32.7 \\
+    Tag precision & 28.3 \\
+    Tag recall & 27.2 \\
+    Word F-measure & 33.3 \\
+    Tag F-measure & 27.7 \\
+    
+\end{tabular}
+
+\vspace{15mm}
+\textbf{Lima sur wsj complet et tags universels}
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 33.9 \\
+    Word recall & 32.7 \\
+    Tag precision & 33.0 \\
+    Tag recall & 31.8 \\
+    Word F-measure & 33.3 \\
+    Tag F-measure & 32.4 \\
+    
+\end{tabular}
+
+Comme dit précédemment, on voit que les resultats sont bien moins bons mais cela est surement du à la modification des fichiers.\\
+On peut néanmoins comparer les resultats entre les tags PTB et Universels : on voit que les résultats en tags universels sont meilleurs, une hypothèse est que comme les tags universels sont plus généraux et moins précis que les tags Lima, la possibilité de se tromper est moindre. Par exemple Lima pourrait se tromper entre deux types d'adjectifs mais en universel il n'en existe qu'un type donc pas d'erreur.
+
+\subsection{Désambiguïsation morphosyntaxique de l’université de Stanford}
+
+Les résultats sont les suivants sur le fichier wsj0010.sample
+
+\textbf{Stanford sur wsj}
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 96.7 \\
+    Word recall & 96.7 \\
+    Tag precision & 93.5 \\
+    Tag recall & 93.5 \\
+    Word F-measure & 96.7 \\
+    Tag F-measure & 93.5 \\
+    
+\end{tabular}
+
+\vspace{15mm}
+\newpage
+
+\textbf{Stanford sur wsj en tags universels}
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 96.7 \\
+    Word recall & 96.7 \\
+    Tag precision & 93.5 \\
+    Tag recall & 93.5 \\
+    Word F-measure & 96.7 \\
+    Tag F-measure & 93.5 \\
+    
+\end{tabular}
+
+Les résultats sont exactement les mêmes, ce qui est plutot étrange. On pourrait penser qu'il existe une correspondances assez bonne entre les tags PTB utilisés par Stanford et les tags universels.
+
+\subsection{Reconnaissance d’entités nommées du CEA List et l’université de Stanford}
+
+Encore une fois il a fallu de nombreuses transformations pour faire correspondre les fichiers obtenus en sortie d'analyse avec les fichiers de réference pour pouvoir utiliser le script d'évaluation mais il a été possible de soutirer ces résultats à Lima et Stanford sur le fichier formal.small.
+
+\textbf{Stanford - Entités nommées}
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 74.4 \\
+    Word recall & 84.1 \\
+    Tag precision & 61.2 \\
+    Tag recall & 69.2 \\
+    Word F-measure & 78.9 \\
+    Tag F-measure & 65.0 \\
+    
+\end{tabular}
+
+\vspace{15mm}
+\newpage
+
+\textbf{LIMA - Entités nommées}
+
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 24.5 \\
+    Word recall & 22.4 \\
+    Tag precision & 11.3 \\
+    Tag recall & 10.3 \\
+    Word F-measure & 23.4 \\
+    Tag F-measure & 10.8 \\
+    
+\end{tabular}
+
+Ici on remarque que les scores de précision et de rappel sont très bas pour Lima, en effet le fichier contient beaucoup de termes ambigus qui peuvent facilement être confondus entre organisation et location comme le terme House qui peut à la fois désigner les deux. La méthode des règles semble être en diffuiculté dans ce cas.
+
+Pour ce qui est de Stanford les scores sont raisonnablement élevés, à peu près au niveau de l'état de l'art dans ce domaine. On peut en déduire que l'approche statistique fonctionne mieux pour ce qui est de la reconnaissance d'entités nommées, ce qui semble intuitif car il n'y a pas vraiment de règle qui définit la forme que peut prendre un nom propre.
 
 \newpage
 \section{Répartition des tâches}
