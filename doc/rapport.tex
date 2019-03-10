@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOCUMENT PREAMBLE %%%
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Comparaison d'outils d'analyse}								
+
+\author{ Bazin Mathias - Bonnard Nathan }						
+
+\date{11 mars 2019}
+
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+\begin{center}    \textsc{\Large   EIT}\\[2.0 cm]	\end{center}
+	\textsc{\Large Rapport  }\\[0.5 cm]				
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+		%	\emph{Submitted To:}\\
+		%	Name\\
+          % Affiliation\\
+           %contact info\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+			\emph{Auteurs :} \\
+			Mathias Bazin et Nathan Bonnard  
+		\end{flushright}
+           
+	\end{minipage}\\[2 cm]
+	
+	\includegraphics[scale = 0.1]{loho.png}
+    
+    
+    
+    
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\arabic{section}}
+\section{Introduction}
+\subsection{Objectifs}
+
+Nous allons dans ce rapport comparer deux outils d'analyse de textes : LIMA du CEA List et l'outil de l'université de Stanford, notemment sur l'attribution des POS-tags et la reconnaissance d'entités nommées.
+
+Nous tenterons de mettre en évidence les points forts et limites de chaque outil et de comprendre les différences entre les résultats.
+
+\subsection{Les outils}
+
+\subsubsection{LIMA}
+
+LIMA est un outil développé par le CEA List qui fait l'analyse à partir de règles de grammaire préalablement écrites par des experts linguistes.
+
+Lima commence par prendre le texte donné et le segmente en éléments unitaires appelés tokens.
+Ensuite vient l'etape d'analyse morphologique après laquelle le programme associe à chaque token du texte une étiquette (ou POS-tag) qui indique la fonction grammaticale du mot dans la phrase.
+Enfin Lima reconnait les entitées nommées et leur associe une catégorie.
+
+Le point fort de Lima est que le fonctionnement par règle assure une détection stricte et donc ceci devrait en théorie donner une forte précision dans les résultats. Par contre si les règles sont trop strictes on pourrait s'attendre à voir un plus faible score de rappel. De plus, la rédaction de ces règles est une tâche très compliquée qui nécessite le travail de linguistes experts pour être faite.
+
+\subsubsection{Outil Stanford}
+L'outil développé par Stanford passe par une approche statistique en utilisant des algorithmes d'apprentissage qui sont d'abord entrainés sur des corpus annotés. 
+
+Le point fort de cette approche est qu'elle est plus souple, par l'apprentissage on s'attend à obtenir des résultats sur n'importe quel type de corpus, même des textes remplis de fautes de frappe/fautes d'orthographe, du moment que l'algorithme a été entrainé sur des corpus adaptés. On s'attend donc à trouver des résultats avec un fort rappel mais peut-être une précision moindre.
+
+Un autre point à souligner est le fait que pour entrainer l'algortithme, il faut lui fournir un corpus de textes annotés. Bien que la tâche d'annnotation puisse être longue dt fastidieuse, elle est moins compliquée que la rédaction de règles et ne nécessite pas forcement d'être faite par des experts linguistes.
+
+\newpage
+\section{Résultats et commentaires}
+\subsection{LIMA étiquettes morpho-syntaxiques}
+
+Pour l'évaluation sur les fichiers wsj0010.sentence on obtient les résultats suivants
+
+\begin{tabular}{c c}
+\hline
+  Catégorie & Score (en pourcentage) \\
+\hline
+    Word precision & 96.6 \\
+    Word recall & 93.5 \\
+    Tag precision & 76.6 \\
+    Tag recall & 74.1 \\
+    Word F-measure & 95.0 \\
+    Tag F-measure & 75.4 \\
+    
+\end{tabular}
+
+
+
+
+
+\newpage
+\section{Répartition des tâches}
+
+Mathias : Partie technique et développement des scripts
+
+Nathan :  Partie analyse et rédaction du rapport
+
+
+\newpage
+
+ 
+\end{document}
+
