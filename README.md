@@ -1,10 +1,10 @@
-# tal
+# EIT
 
-pour lancer les script depuis le dossier tal:
+pour lancer les script depuis le dossier tal (la racine du projet):
 
 en indiquant le ficher input, affiche le resultat dans la console, le resultat peut etre redirigé dans un fichier si besoin
 * script2-2.py
-* script4-2
+* script4-2.py
 * scriptForDisambiguatedXML.py
 
 ex depuis la racine du projet
